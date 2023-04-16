@@ -1,0 +1,32 @@
+/* AQUI COMEÇA O CSS DO NAV*/
+nav {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #eee;
+  }
+  
+  nav a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+/*AQUI TERMINA O CSS DO NAV*/  
