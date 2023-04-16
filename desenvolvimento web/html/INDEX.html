@@ -1,62 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>HELLO WORD</title>
-		<style>
-			nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-		</style>
-	</head>
-	<body>
-		<header>
-			<h1>
-				<a href="index.html"></a>
-				<img src="../img/ficr_logo.jpg" alt="Faculdade Imaculada Conceição do Recife">
-			</h1>
-			<nav>
-				<li><a href="#">Conheça ▼</a>
-					<ul>
-						<li><a href="">INSTITUIÇÃO</a></li>
-					</ul>
-					<ul>
-						<li><a href="">PASTORALIDADE</a></li>
-					</ul>
-					<ul>
-						<li><a href="">INFRAESTRUTURA</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Cursos ▼</a>
-					<ul>
-						<li><a href="">PRESEMCIAL</a></li>
-					</ul>
-					<ul>
-						<li><a href="">SEMIPRESEMCIAL</a></li>
-					</ul>
-					<ul>
-						<li><a href="">EDUCAÇÃO A DISTANCIA</a></li>
-					</ul>
-				</li>
-				<br></br>
-				<li><a href="https://github.com/EliakinnSilva">Estudantes ▼</a></li>
-				<br></br>
-				<li><a href="#">Educadores ▼</a></li>
-				<br></br>
-				<li><a href="#">Inscreva-se ▼</a></li>
+  <head>
+    <meta charset="UTF-8">
+    <title>Minha playlist</title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="index.html">
+          <img src="../img/ficr_logo.jpg" alt="Faculdade Imaculada Conceição do Recife">
+        </a>
+        Minha Playlist
+		<!-- adicione quantas músicas quiser -->
+		<ul id="playlist">
+			<li><a href="../IMG/henriqueejulianooficial-completa-ai-part-marilia-mendonca-09f511dd.mp3">Música 1</a></li>
+			<li><a href="../IMG/hungriahiphop-amor-e-fe-a4c807bb.mp3">Música 2</a></li>
+			<li><a href="../IMG/abraaosalesoficial-malvada-da-morte-0b22227b.mp3">Música 3</a></li>
+			<!-- adicione quantas músicas quiser -->
+		  </ul>
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="#">Conheça ▼</a>
+            <ul>
+              <li><a href="">INSTITUIÇÃO</a></li>
+              <li><a href="">PASTORALIDADE</a></li>
+              <li><a href="">INFRAESTRUTURA</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Cursos ▼</a>
+            <ul>
+              <li><a href="">PRESENCIAL</a></li>
+              <li><a href="">SEMIPRESENCIAL</a></li>
+              <li><a href="">EDUCAÇÃO A DISTANCIA</a></li>
+            </ul>
+          </li>
+          <li><a href="https://github.com/EliakinnSilva">Estudantes ▼</a></li>
+          <li><a href="#">Educadores ▼</a></li>
+          <li><a href="#">Inscreva-se ▼</a></li>
+          <li><a href="https://www.youtube.com/@FICROFICIAL"> ☺ ♪ YouTube ☺ ♪ ▼</a></li>
+        </ul>
+      </nav>
+    </header>
+<!-- adicione quantas músicas quiser -->
+    <ul id="playlist">
+      <li><a href="../IMG/henriqueejulianooficial-completa-ai-part-marilia-mendonca-09f511dd.mp3">Música 1</a></li>
+      <li><a href="../IMG/hungriahiphop-amor-e-fe-a4c807bb.mp3">Música 2</a></li>
+      <li><a href="../IMG/abraaosalesoficial-malvada-da-morte-0b22227b.mp3">Música 3</a></li>
+      <!-- adicione quantas músicas quiser -->
+    </ul>
 
-				<li><a href="https://www.youtube.com/@FICROFICIAL"> ☺ ♪ YouTbe ☺ ♪ ▼</a></li>
-			</nav>
-		</header>
-					
-		<br>
-		<br>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/8tQFFkp1mt0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <audio id="player" controls autoplay></audio>
 
-		<footer>todos os direirtos reservados</footer>
-	</body>
+    <footer>Todos os direitos reservados</footer>
+
+    <script>
+      const playlist = document.getElementById("playlist");
+      const player = document.getElementById("player");
+      const links = playlist.getElementsByTagName("a");
+      const len = links.length;
+
+      // reproduz a primeira música ao carregar a página
+      player.src = links[0].href;
+      player.play();
+
+      // adiciona um evento de clique a cada música na lista
+      for (let i=0; i<len; i++) {
+        links[i].onclick = function(e) {
+          e.preventDefault();
+          player.src = this.href;
+          player.play();
+        }
+      }
+
+      // adiciona um evento para tocar a próxima música quando a atual terminar
+      player.addEventListener("ended", function() {
+        const next = document.querySelector("a[href='" + player.src + "']").parentNode.nextElementSibling;
+        if (next) {
+          player.src = next.getElementsByTagName("a")[0].href;
+          player.play();
+        }
+      });
+    </script>
+  </body>
 </html>
