@@ -1,0 +1,87 @@
+<<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parágrafos, Tabelas e Formulário</title>
+</head>
+<body>
+    <h1>
+        Parágrafos, Tabelas e Formulários
+    </h1>
+    	<p>Na aula de hoje apresentaremos os conceitos de parágrafos, tabelas e formulários! </p>
+    	<table border="1" cellspacing="5" cellpadding="20" align="">
+    		<tr>
+    			<th>item 1</th>
+    			<th>item 2</th>
+    			<th>item 3</th>
+    			<th rowspan="2" >item 4</th>
+    		</tr>
+    		<tr>
+    			<td>valor 1.1</td>
+    			<td>valor 2.1</td>
+    			<td>valor 3.1</td>
+    			
+    		</tr>
+    		<tr>
+    			<td>valor 1.2</td>
+    			<td>valor 2.2</td>
+    			<td colspan="2">valor 3.2</td>
+    			
+    		</tr>
+    	</table>
+    	<br>
+    	<br>
+    	<form action="enviado.html" method="post">
+    		<label for="nome">NOME</label> <br>
+			<input type="text" name="NOME">    		
+    	
+    		<label for="email">EMAIL</label><br>
+			<input type="email" name="EMAIL">    		
+    	
+        
+      
+    		<label for="TELEFONE">FONE</label><br>
+			<input type="tel" name="FONE" id="TELEFONE">   
+            
+    	   	
+    		<label for="senha">SENHA</label> <br>
+			<input type="password" name="SENHA">   
+		
+		        
+    	
+    		<label for="Assunto">Assunto:</label><br>
+			       
+            <textarea cols="10" rows="5">Digite o assunto sugerido</textarea> <br>
+			<label for="comida">Comida favorita</label><br>
+			<input type="radio"name="comida"value="Bobó">Bobó<br>
+			<input type="radio"name="comida"value="Strgogonof">Strogonof<br>
+			<input type="radio"name="comida"value="Sarapatéu">Sarapatéu<br>
+			<input type="radio"name="comida"value="Feijoada">Feijoada<br>
+
+			<label for="Esporte">Esporte favorito</label><br>
+			<input type="checkbox"name="Esporte"value="Futebol">Futebol<br>
+			<input type="checkbox"name="Esporte"value="Volei">Volei<br>
+			<input type="checkbox"name="Esporte"value="Natação">Natação<br>
+			<input type="checkbox"name="Esporte"value="Basquete">Basquete<br>
+
+			<label for="Automóvel">Escolha um automóvel :</label><br>
+		<select name="Automóvel" >
+			<option value="Siena">Siena</option>
+			<option value="Onix">Onix</option>
+			<option value="Pálio">Pálio</option>
+			<option value="Uno_mile">Uno_mile</option>
+		</select>
+		<br><br>
+		<input type="reset" name="Limpar Formulário">
+		<input type="submit" name="Enviar Formuláio">
+
+		</form>
+		
+			
+			<br>
+            
+        </form>
+</body>
+</html>
