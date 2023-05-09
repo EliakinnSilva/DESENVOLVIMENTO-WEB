@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Parágrafos, tabelas e formulários.</title>
+	</head>
+	<body>
+		<h1>Parágrafos, tabelas e formulários.</h1>
+		<p>Na aula de hoje apresenteremos os conceitos de parágrafos, tabelas e formulários!</p>
+		<table border="1" cellspacing="6" cellpadding="20">
+			<tr>
+				<th>item 1</th>
+				<th>item 2</th>
+				<th>item 3</th>
+				<th rowspan="2">item 4</th>
+			</tr>
+			<tr>
+				<td>valor 1.1</td>
+				<td>valor 2.1</td>
+				<td>valor 3.1</td>
+			</tr>
+			<tr>
+				<td>valor 1.2</td>
+				<td>valor 2.2</td>
+				<td colspan="2">valor 3.2</td>
+			</tr>
+		</table>
+		<br>
+		<form action="" method="post">
+			<label for="nome">Nome:</label><br>
+			<input type="text" name="nome" id="nome"><br>
+			<label for="telefone">Fone:</label><br>
+			<input type="tel" name="telefone" id="telefone"><br>
+			<label for="email">E-mail:</label><br>
+			<input type="mail" name="email" id="email"><br>
+			<label for="senha">Senha:</label><br>
+			<input type="password" name="senha" id="senha"><br>
+			<label for="assunto">assunto</label><br>
+			<textarea cols="10" rows="5">SPORT ☺ ☺ ☺</textarea><br>
+
+			<label for="comida">Comida favorita:</label><br>
+			<input type="radio" name="comida" value="Bobó"> Bobó <br>
+			<input type="radio" name="comida" value="Estroganofe"> Estroganofe <br>
+			<input type="radio" name="comida" value="sarapatéu"> sarapatéu <br>
+			<input type="radio" name="comida" value="Feijoada"> Feijoada <br>
+
+			<label for="esporte">esporte favorito:</label> <br>
+			<input type="checkbox" name="esporte" value="futebol"> futebol <br>
+			<input type="checkbox" name="esporte" value="futebol"> volei <br>
+			<input type="checkbox" name="esporte" value="futebol"> basquete <br>
+			<input type="checkbox" name="esporte" value="futebol"> natação <br>
+
+			<label for="automovel">escolha um automovel:</label><br>
+			<select name="automovel">
+				<option value="siena">siena</option>
+				<option value="onix">Ônix</option>
+				<option value="palio">palio</option>
+			</select>	
+			<br><br>
+
+			<input type="reset" name="limpar formulário"> <br><br>
+			<input type="submit" name="enviar">
+
+
+		</form>
+	</body>
+</html>
