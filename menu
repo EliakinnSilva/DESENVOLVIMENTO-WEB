@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		<header>
+			<h1><img src="img/ficr_logo.jpg" alt="faculdade imaculada conceição do Recife"></h1>
+			<nav>
+				<ul>
+					<li><a href="#">conheça▼</a>
+						<ul>
+							<li><a href="#">A intituição</a></li>
+							<li><a href="#">Pastoralidade</a></li>
+							<li><a href="#">Infraestrutura</a></li>
+							<li><a href="#">Núcleos</a></li>
+						</ul>
+					</li>
+					<li><a href="#">cursos▼</a>
+						<ul>
+							<li><a href="#">Presencial</a></li>
+							<li><a href="#">Semi Prsencial</a></li>
+							<li><a href="#">A distancia</a></li>
+							<li><a href="#">Como ingressar</a></li>
+						</ul>
+					</li>
+					<li><a href="#">estudantes</a></li>
+					<li><a href="#">educadores</a></li>
+					<li><a href="#">inscreva-se</a></li>
+
+				</ul>
+			</nav>
+		</header>
+	</body>
+</html>
